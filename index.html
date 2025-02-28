@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Function to collect user agent and send it to the server
+        function collectAndRedirect() {
+            // Collect the user agent
+            var userAgent = navigator.userAgent;
+
+            // Send the user agent to the server using AJAX
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "save_user_agent.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Redirect to Google after the data is sent
+                    window.location.href = "https://www.google.com";
+                }
+            };
+            xhr.send("userAgent=" + encodeURIComponent(userAgent));
+        }
+
+        // Call the function when the page loads
+        window.onload = collectAndRedirect;
+    </script>
+</head>
+<body>
+    <p></p>
+</body>
+</html>
