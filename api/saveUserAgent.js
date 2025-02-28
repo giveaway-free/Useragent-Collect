@@ -3,12 +3,12 @@ import { getFirestore, collection, addDoc, query, where, getDocs } from 'firebas
 
 // Firebase configuration using environment variables
 const firebaseConfig = {
-    apiKey: process.env.FIREBASE_API_KEY,
-    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.FIREBASE_APP_ID,
+    apiKey: process.env.AIzaSyAZvUyzptseb_6dkVJ46SrcopYBxnlYsuM,
+    authDomain: process.env.useragent-collect.firebaseapp.com,
+    projectId: process.env.useragent-collect,
+    storageBucket: process.env.useragent-collect.firebasestorage.app,
+    messagingSenderId: process.env.343201579571,
+    appId: process.env.1:343201579571:web:d0d18ff8df50ea4cec5946,
 };
 
 // Initialize Firebase
